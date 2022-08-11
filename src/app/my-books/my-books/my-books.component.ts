@@ -104,7 +104,6 @@ export class MyBooksComponent implements OnInit {
     this.finished = this.finished.filter((book: any) => book.key != key);
   }
 
-
   toggleCollapseWantToRead() {
     this.wantToReadCollapsed = !this.wantToReadCollapsed;
   }

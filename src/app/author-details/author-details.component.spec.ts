@@ -1,4 +1,6 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
 
 import { AuthorDetailsComponent } from './author-details.component';
 
@@ -8,9 +10,24 @@ describe('AuthorDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AuthorDetailsComponent ]
+      declarations: [AuthorDetailsComponent],
+      providers: [
+        HttpClient,
+        HttpHandler,
+        {
+          provide: ActivatedRoute,
+          useValue:
+          {
+            snapshot:
+            {
+              url: [
+                { path: 'authors' }]
+            }
+          }
+        }
+      ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(AuthorDetailsComponent);
     component = fixture.componentInstance;

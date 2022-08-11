@@ -1,3 +1,4 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BookListItemComponent } from './book-list-item.component';
@@ -8,9 +9,10 @@ describe('BookListItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BookListItemComponent ]
+      declarations: [BookListItemComponent],
+      providers: [HttpClient, HttpHandler]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(BookListItemComponent);
     component = fixture.componentInstance;

@@ -5,7 +5,7 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { MyBooksComponent } from './my-books/my-books/my-books.component';
 import { SearchComponent } from './search/search/search.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', redirectTo: '/books', pathMatch: 'full' },
   { path: 'books', component: SearchComponent },
   { path: 'authors', component: SearchComponent },

@@ -8,9 +8,9 @@ describe('OptionsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OptionsComponent ]
+      declarations: [OptionsComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(OptionsComponent);
     component = fixture.componentInstance;
@@ -20,4 +20,10 @@ describe('OptionsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("should have selectedOption initialized to a value 'Title'", () => {
+    const optionsComponent = new OptionsComponent();
+    expect(optionsComponent.selectedOption).toEqual('Title');
+  });
+
 });

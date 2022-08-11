@@ -26,12 +26,15 @@ export class SearchComponent implements OnInit {
 
   term: string = '';
 
+  type: string = '';
+
   constructor(private booksService: BooksService,
     private authorService: AuthorsService,
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    if (this.route.snapshot.url[0].toString().toLowerCase() === 'books') this.showOptions = true;
+    this.type = this.route.snapshot.url[0].toString().toLowerCase();
+    if (this.type === 'books') this.showOptions = true;
   }
 
   setSelectedOption(option: string) {

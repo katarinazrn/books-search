@@ -8,9 +8,9 @@ describe('ButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ButtonComponent ]
+      declarations: [ButtonComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ButtonComponent);
     component = fixture.componentInstance;
@@ -19,5 +19,23 @@ describe('ButtonComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have toggle wantToRead ', () => {
+    component.key = '/works/OL25040568W';
+    expect(component.finished).toBeFalse();
+    expect(component.reading).toBeFalse();
+    expect(component.wantToRead).toBeFalse();
+
+    component.toggleWantToRead();
+    expect(component.wantToRead).toBeTrue();
+    expect(component.finished).toBeFalse();
+    expect(component.reading).toBeFalse();
+
+    component.toggleWantToRead();
+    expect(component.finished).toBeFalse();
+    expect(component.reading).toBeFalse();
+    expect(component.wantToRead).toBeFalse();
+
   });
 });

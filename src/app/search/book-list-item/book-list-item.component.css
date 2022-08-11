@@ -1,0 +1,49 @@
+.list-item {
+    display: flex;
+    margin: 18px;
+}
+
+.image-link {
+    margin-right: 20px;
+    width: 25%;
+    height: auto;
+}
+
+img {
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+p {
+    padding: 0;
+    margin: 4px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 500px) {
+
+    .list-item {
+        flex-direction: column;
+    }
+
+    .image-link {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}

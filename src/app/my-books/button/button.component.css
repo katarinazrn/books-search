@@ -1,0 +1,86 @@
+.buttons {
+    display: flex;
+    justify-content: start;
+    min-width: 0px;
+    width: fit-content;
+}
+
+.flex-column {
+    flex-direction: column;
+    justify-content: end;
+    min-width: 200px;
+}
+
+button {
+    color: rgb(133, 132, 130);
+    display: flex;
+    justify-content: left;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10px;
+    margin: 2px;
+    margin-left: auto;
+    width: fit-content;
+    border-radius: 55px;
+    padding: 3px;
+}
+
+.active {
+    background-color: rgb(140, 138, 218);
+    color: white;
+}
+
+.material-icons {
+    padding: 4px;
+    display: flex;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.text {
+    display: none;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto 0;
+    margin-left: 2px;
+    padding-right: 6px;
+    transition: width 1s linear;
+}
+
+button:hover .text {
+    display: block;
+}
+
+
+@media (pointer:none),
+(pointer:coarse),
+(max-width:500px) {
+
+    button {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .text {
+        display: block;
+        text-align: left;
+    }
+
+    .material-icons {
+        font-size: 10px;
+    }
+
+    .active {
+        background-color: transparent;
+        color: black;
+    }
+}

@@ -1,0 +1,41 @@
+<div class="my-books">
+    <div class="want-to-read list">
+        <div class="heading">
+            <h2>Want to Read</h2>
+            <span *ngIf="wantToReadCollapsed" (click)="toggleCollapseWantToRead()"
+                class="material-icons">expand_more</span>
+            <span *ngIf="!wantToReadCollapsed" (click)="toggleCollapseWantToRead()"
+                class="material-icons">expand_less</span>
+        </div>
+        <i *ngIf="wantToRead.length==0">No items</i>
+        <div *ngIf="!wantToReadCollapsed" class="items">
+            <app-my-books-item (update)="updateList($event)" *ngFor="let book of wantToRead" [book]="book">
+            </app-my-books-item>
+        </div>
+    </div>
+    <div class="reading list">
+        <div class="heading">
+            <h2>Reading</h2>
+            <span *ngIf="readingCollapsed" (click)="toggleCollapseReading()" class="material-icons">expand_more</span>
+            <span *ngIf="!readingCollapsed" (click)="toggleCollapseReading()" class="material-icons">expand_less</span>
+        </div>
+        <i *ngIf="reading.length==0">No items</i>
+        <div *ngIf="!readingCollapsed" class="items">
+            <app-my-books-item (update)="updateList($event)" *ngFor="let book of reading" [book]="book">
+            </app-my-books-item>
+        </div>
+    </div>
+    <div class="finished list">
+        <div class="heading">
+            <h2>Finished</h2>
+            <span *ngIf="finishedCollapsed" (click)="toggleCollapseFinished()" class="material-icons">expand_more</span>
+            <span *ngIf="!finishedCollapsed" (click)="toggleCollapseFinished()"
+                class="material-icons">expand_less</span>
+        </div>
+        <i *ngIf="finished.length==0">No items</i>
+        <div *ngIf="!finishedCollapsed" class="items">
+            <app-my-books-item (update)="updateList($event)" *ngFor="let book of finished" [book]="book">
+            </app-my-books-item>
+        </div>
+    </div>
+</div>

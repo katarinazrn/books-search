@@ -1,0 +1,17 @@
+<div [class]="flexColumn? 'flex-column buttons':'buttons'">
+    <button [class]="wantToRead ? 'active':''" (click)="toggleWantToRead()">
+        <span class="material-icons">book</span>
+        <span *ngIf="!wantToRead" class="text">Want to read</span>
+        <span *ngIf="wantToRead" class="text">Remove from want to read</span>
+    </button>
+    <button [class]="reading ? 'active':''" (click)="toggleReading()">
+        <span class="material-icons">menu_book</span>
+        <span *ngIf="!reading" class="text"> Add to Reading</span>
+        <span *ngIf="reading" class="text">Remove from reading</span>
+    </button>
+    <button [class]="finished ? 'active':''" (click)="toggleFinished()">
+        <span class="material-icons">done_all</span>
+        <span *ngIf="!finished" class="text">Mark as finished</span>
+        <span *ngIf="finished" class="text">Remove from finished</span>
+    </button>
+</div>

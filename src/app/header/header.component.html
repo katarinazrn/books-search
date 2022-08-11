@@ -1,0 +1,23 @@
+<header [class]="showMenu?'full':''">
+    <div class="top">
+        <a id="logo" routerLink="/books">BOOKS</a>
+        <span (click)="toggleMenu()" class="menu-icon">
+            <span *ngIf="!showMenu" class="material-icons">menu</span>
+            <span *ngIf="showMenu" class="material-icons">close</span>
+        </span>
+    </div>
+    <ul>
+        <li>
+            <a (click)="toggleMenu()" routerLink="/books" [routerLinkActiveOptions]="{exact:false}"
+                routerLinkActive="active">Books</a>
+        </li>
+        <li>
+            <a (click)="toggleMenu()" routerLink="/authors" [routerLinkActiveOptions]="{exact:false}"
+                routerLinkActive="active">Authors</a>
+        </li>
+        <li>
+            <a (click)="toggleMenu()" routerLink="/my-books" [routerLinkActiveOptions]="{exact:false}"
+                routerLinkActive="active">My Books</a>
+        </li>
+    </ul>
+</header>

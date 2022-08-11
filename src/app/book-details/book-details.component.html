@@ -1,0 +1,36 @@
+<div class="details">
+    <div class="info">
+        <img src="{{cover}}" />
+        <div>
+            <h1>{{book.title}}</h1>
+            <p>by <span *ngFor="let author of book.authors; last as isLast">
+                    <a
+                        routerLink="/{{author.author.key}}"><b>{{author.details?.name??author.details?.personal_name}}</b></a><span
+                        *ngIf="!isLast">, </span>
+                </span></p>
+            <p *ngIf="book.publishers">publisher
+                <span *ngFor="let publisher of book.publishers; last as isLast">
+                    <b> {{publisher}}</b><span *ngIf="!isLast">,</span>
+                </span>
+            </p>
+            <p *ngIf="book.first_publish_date">publish date
+                <b> {{book.first_publish_date}}</b>
+            </p>
+            <p *ngIf="book.publish_date">publish date
+                <b>{{book.publish_date}}</b>
+            </p>
+            <p *ngIf="book.number_of_pages">pages
+                <b> {{book.number_of_pages}}
+                </b>
+            </p>
+            <p *ngIf="book.isbn_10">isbn
+                <b>{{book.isbn_10}}</b>
+            </p>
+        </div>
+    </div>
+    <app-button [key]="book.key"></app-button>
+    <hr />
+    <p>{{book.description?.value}}</p>
+    <p>{{book.description}}</p>
+
+</div>

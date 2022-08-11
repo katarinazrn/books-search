@@ -1,0 +1,22 @@
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.main {
+    display: flex;
+}
+
+img {
+    max-width: 200px;
+    padding: 10px;
+}
+
+@media (max-width: 500px) {
+    .details {
+        margin-top: 70px;
+    }
+}

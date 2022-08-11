@@ -1,0 +1,6 @@
+<div class="options">
+    <div *ngFor="let option of OPTIONS" class="option">
+        <input (change)="onChange()" type="radio" name="{{option}}" value="{{option}}" [(ngModel)]="selectedOption" />
+        {{option}}
+    </div>
+</div>

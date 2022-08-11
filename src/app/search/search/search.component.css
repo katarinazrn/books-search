@@ -1,0 +1,21 @@
+.bar {
+
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 100%;
+    margin-top: calc(50vh - 100px);
+    transition: margin-top 0.7s cubic-bezier(0.165, 0.84, 0.44, 1),
+        width 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.top {
+    margin-top: 0;
+    width: 90%;
+}
+
+@media (max-width:500px) {
+    .top {
+        margin-top: 70px;
+    }
+}

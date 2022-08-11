@@ -1,0 +1,15 @@
+<div class="details">
+    <div class="main">
+        <img src="{{picture}}" />
+        <div>
+            <h1>{{author.name}}</h1>
+            <p>
+                <span>{{author.birth_date}}</span>
+                <span *ngIf="author.death_date">- {{author.death_date}}</span>
+            </p>
+        </div>
+    </div>
+
+    <p>{{author.bio?.value}}</p>
+    <p>{{author.bio}}</p>
+</div>

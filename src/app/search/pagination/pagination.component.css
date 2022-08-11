@@ -1,0 +1,23 @@
+.pagination {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-weight: bold;
+    padding: 4px 7px;
+    margin: 1px;
+    border-radius: 0;
+}
+
+.current {
+    background-color: rgb(189, 2, 2);
+    color: white;
+}
+
+.first,
+.last {
+    background-color: rgb(70, 70, 70);
+    color: white;
+}

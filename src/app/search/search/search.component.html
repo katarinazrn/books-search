@@ -1,0 +1,9 @@
+<div class="{{centerBar? 'bar' : 'bar top'}}">
+    <app-search-bar (search)="search($event)"></app-search-bar>
+    <app-options (setOption)="setSelectedOption($event)" *ngIf="showOptions"></app-options>
+</div>
+<app-search-result-list [list]="searchResult" [type]="showOptions?'book':'author'"></app-search-result-list>
+<p *ngIf="notFound">No results</p>
+<app-pagination (updateCurrent)="setCurrentPageAndSearch($event)" [numberOfPages]="numberOfPages" [current]="current">
+</app-pagination>
+<app-loading *ngIf="loading"></app-loading>

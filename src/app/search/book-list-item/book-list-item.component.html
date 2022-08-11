@@ -1,0 +1,19 @@
+<div class="list-item">
+    <a class="image-link" routerLink="/books{{book.key}}">
+        <img src="{{cover}}" />
+    </a>
+    <div class="info">
+        <h2>
+            <a routerLink="/books{{book.key}}"> {{book.title}}</a>
+        </h2>
+        <p>by <a routerLink="/authors/{{author.author_key}}" class="author"
+                *ngFor="let author of book.author_details; last as isLast">
+                <b>{{author.author_name}}</b>
+                <span *ngIf="!isLast">, </span>
+            </a></p>
+        <p>first published in year <b>{{book.first_publish_year}}</b></p>
+    </div>
+    <div class="buttons">
+        <app-button [flexColumn]="true" [key]="book.key"></app-button>
+    </div>
+</div>

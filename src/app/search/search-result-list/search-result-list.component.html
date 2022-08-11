@@ -1,0 +1,6 @@
+<ul *ngIf="type=='book'" id="results" class="list">
+    <app-book-list-item *ngFor="let item of list" [book]="item"></app-book-list-item>
+</ul>
+<ul *ngIf="type=='author'" class="list">
+    <app-author-list-item *ngFor="let item of list" [author]="item"></app-author-list-item>
+</ul>

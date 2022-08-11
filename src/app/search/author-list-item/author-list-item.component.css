@@ -1,0 +1,9 @@
+.item {
+    display: flex;
+    margin: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

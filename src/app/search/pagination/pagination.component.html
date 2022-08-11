@@ -1,0 +1,9 @@
+<div *ngIf="numberOfPages > 1" class="pagination">
+    <button (click)="setCurrentPage(first)" *ngIf="first" class="first">{{first}}</button>
+    <span *ngIf="first!=current && first && first!=prev-1">...</span>
+    <button (click)="setCurrentPage(prev)" *ngIf="prev" class="prev">{{prev}}</button>
+    <button class="current">{{current}}</button>
+    <button (click)="setCurrentPage(next)" *ngIf="next" class="next">{{next}}</button>
+    <span *ngIf="last && last!=next+1">...</span>
+    <button *ngIf="last" (click)="setCurrentPage(last)" class="last">{{last}}</button>
+</div>

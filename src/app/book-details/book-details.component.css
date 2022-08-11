@@ -1,0 +1,21 @@
+img {
+    max-width: 30%;
+    padding: 16px;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.info {
+    display: flex;
+}
+
+
+@media (max-width: 500px) {
+    .details {
+        margin-top: 70px;
+    }
+}

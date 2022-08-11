@@ -1,0 +1,22 @@
+.options {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.option {
+    display: flex;
+    margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+    .options {
+        flex-wrap: wrap;
+        flex: 1 0 1;
+    }
+
+    .option {
+        margin: 5px;
+    }
+
+}

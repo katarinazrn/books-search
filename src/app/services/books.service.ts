@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class BooksService {
 
-  baseUrl = 'http://openlibrary.org'
+  baseUrl = 'https://openlibrary.org'
 
   constructor(private http: HttpClient) { }
 

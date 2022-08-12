@@ -26,4 +26,10 @@ describe('OptionsComponent', () => {
     expect(optionsComponent.selectedOption).toEqual('Title');
   });
 
+  it("should show options when setOption set to true", () => {
+    component.setOption = true;
+    const element: HTMLElement = fixture.nativeElement;
+    expect(element.textContent).toContain('Publisher');
+  })
+
 });

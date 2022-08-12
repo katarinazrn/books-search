@@ -9,12 +9,9 @@ import { AuthorsService } from 'src/app/services/authors.service';
 export class AuthorListItemComponent implements OnInit {
 
   @Input() author: any;
-  picture: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
-
 }

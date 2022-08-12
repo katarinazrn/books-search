@@ -1,6 +1,4 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { BooksService } from 'src/app/services/books.service';
-import { MyBooksService } from 'src/app/services/my-books.service';
 
 @Component({
   selector: 'app-book-list-item',
@@ -12,7 +10,7 @@ export class BookListItemComponent implements OnInit, OnChanges {
   @Input() book: any;
   cover: string = '';
 
-  constructor(private bookService: BooksService, private myBooksService: MyBooksService) {
+  constructor() {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -20,10 +18,14 @@ export class BookListItemComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
+    this.setCoverImage();
+    this.setAuthorDetails();
+  }
+
+  setCoverImage() {
     if (this.book.cover_i)
       this.cover = `https://covers.openlibrary.org/b/id/${this.book.cover_i}-M.jpg`;
     else this.cover = './assets/cover.png';
-    this.setAuthorDetails();
   }
 
   setAuthorDetails() {
